@@ -1,0 +1,48 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div {
+    width: 200px;
+    height: 200px;
+    margin: 25px;
+    background-color: aqua;
+    font-size: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: anim1 10s infinite;
+    transition: background-color 0.5s, transform 0.5s;
+}
+
+div:hover {
+    animation-play-state: paused;
+    background-color: coral;
+    transform: scale(2);
+}
+
+@keyframes anim1 {
+    0%, 100% {
+        transform: scale(0) translateX(0%); 
+        background-color: blue;
+        border-radius: 0px;
+    }
+    25% {
+        transform: scale(1) translateX(100%);
+        background-color: red;
+        border-radius: 20px;
+    }
+    50% {
+        transform: scale(1.5) translateX(250%);
+        background-color: yellow;
+        border-radius: 50px;
+    }
+    75% {
+        transform: scale(1) translateX(100%);
+        background-color: green;
+        border-radius: 20px;
+    }
+}
